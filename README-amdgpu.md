@@ -4,6 +4,8 @@
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
 **Author:** Jimmy Källhagen
 
+# **NAVI31** - optimized
+
 ## Overview
 
 Optimized kernel module parameters for the AMD `amdgpu` driver, targeting desktop performance and stability on modern AMD GPUs.
