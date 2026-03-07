@@ -2,8 +2,16 @@
 
 **File:** `/etc/modprobe.d/*.conf`  
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
-**Author:** Jimmy Källhagen
+**Author:** _Jimmy Källhagen_
 
-## Overview
+---
+
+## **Overview**
 Optimized kernel module parameters for the AMD, Intel and NVIDIA
 
+---
+
+## **GPU** - Configuration
+  - [**AMD-GPU**](/README-amdgpu.md) - _Optimized kernel module parameters_
+  - [**INTEL-GPU**](/README-intel.md) - _Optimized kernel module parameters_
+  - [**NVIDIA-GPU**](/README-nvidia.md) - _Optimized kernel module parameters_
