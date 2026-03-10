@@ -45,6 +45,8 @@ The scripts automatically detect your root ZFS dataset and apply the flags via:
 zfs set org.zfsbootmenu:commandline="..." <root_dataset>
 ```
 
+The scripts that using nohz_full have automatic cpu detection and apply so your first two physical cores remain untouched, so it doesn't disrupt your base system
+
 ---
 
 ## Complete Flag Reference
@@ -96,9 +98,20 @@ zfs set org.zfsbootmenu:commandline="..." <root_dataset>
 | `amd_pstate=active` | AMD P-State driver mode | `active`, `passive`, `guided`, `disable` | Best AMD frequency scaling | AMD Zen 3+ only |
 | `amd_pstate.shared_mem=1` | AMD P-State shared memory | 0, 1 | Required for some AMD CPUs | — |
 | `amd_prefcore=enable` | AMD Preferred Core | `enable`, `disable` | Better boost on best cores | Zen 4+ only |
+
+### CPU Power Management
+
+| Flag | Description | Options | Pros | Cons |
+|------|-------------|---------|------|------|
+| `processor.max_cstate` | Limit CPU C-state depth | 0-9 (lower = less sleep) | Lower latency | Higher power consumption |
+| `amd_pstate` | AMD P-State driver mode | `active`, `passive`, `guided`, `disable` | AMD frequency scaling | AMD Zen 3+ only |
+| `amd_pstate.shared_mem` | AMD P-State shared memory | 0, 1 | Required for some AMD CPUs | - |
+| `amd_prefcore` | AMD Preferred Core | `enable`, `disable` | Better boost on best cores | Zen 4+ only |
+| `intel_idle.max_cstate` | Intel: Limit idle states | 0-9 | Lower latency (Intel) | Higher power (Intel only) |
+| `intel_pstate` | Intel P-State driver mode | `active`, `passive`, `disable`, `no_hwp` | Intel frequency scaling | Intel only |
 | `idle=nomwait` | Disable MWAIT for idle | `nomwait`, `poll`, `halt` | Lower latency | Higher power |
 | `idle=poll` | Never sleep, poll for work | `poll` | **Lowest latency possible** | **Maximum power consumption** |
-| `idle=halt` | Use HLT instruction | `halt` | Balanced | — |
+| `idle=halt` | Use HLT instruction | `halt` | Balanced | - |
 
 ### Timer & Clock
 
@@ -181,105 +194,6 @@ zfs set org.zfsbootmenu:commandline="..." <root_dataset>
 | Flag | Description | Options | Pros | Cons |
 |------|-------------|---------|------|------|
 | `numa_balancing=1` | Enable NUMA balancing | 0, 1 | Auto-migrate memory to local node | Overhead on non-NUMA |
-
----
-
-## Profile Details
-
-### Desktop Profile
-
-Balanced settings for daily use with good performance:
-
-```bash
-rw boot=zfs nowatchdog split_lock_detect=off mitigations=off 
-processor.max_cstate=2 amd_pstate=active idle=nomwait zswap.enabled=0 
-transparent_hugepage=madvise clocksource=tsc tsc=reliable hpet=disable 
-nohz=on highres=on skew_tick=1 splash loglevel=3 
-snd_hda_intel.power_save=0 snd_hda_intel.power_save_controller=N
-```
-
-**Trade-offs:**
-- Security mitigations disabled (performance over security)
-- C-state limited to C2 (balance of power and latency)
-- No CPU isolation (all cores available to scheduler)
-
-### Extreme Profile
-
-Maximum performance, no compromises:
-
-```bash
-rw boot=zfs nowatchdog split_lock_detect=off mitigations=off 
-processor.max_cstate=1 amd_pstate=active idle=nomwait zswap.enabled=0 
-transparent_hugepage=madvise clocksource=tsc tsc=reliable hpet=disable 
-nohz=on nohz_full=2-15,18-31 highres=on threadirqs skew_tick=1 
-splash loglevel=3 snd_hda_intel.power_save=0 snd_hda_intel.power_save_controller=N
-```
-
-**Additional features:**
-- `processor.max_cstate=1` — CPU never enters deep sleep
-- `nohz_full` — Tickless kernel on all but housekeeping cores
-- `threadirqs` — IRQ handlers run as schedulable threads
-
-**Auto-detection:**
-The extreme script automatically detects your CPU topology and reserves the first two physical cores for kernel housekeeping, applying `nohz_full` to all remaining cores.
-
----
-
-## The Personality
-
-When you run the meore extreme commandline collection script, you'll will see that the script litterly command 0 and 1 to go faster. just a try to be funny, CPU works with 0 and 1...
-
-```
-Searching...
-Searching...
-Wait...
-Zero found [OK]
-Searching...
-Searching...
-One found [OK]
-
-GO! GO! GO Zero and One!
-Give me every bit you got!
-Zfsbootmenu is armed and ready, do you dare to boot?
-```
-
----
-
-## Risk Assessment
-
-| Setting | Performance Gain | Risk |
-|---------|------------------|------|
-| `mitigations=off` | 5-30% | High (CPU vulnerabilities) |
-| `processor.max_cstate=1` | Lower latency | Medium (power consumption) |
-| `nohz_full` | Near-zero kernel overhead | Low (if configured correctly) |
-| `idle=poll` | Lowest latency | High (maximum power draw) |
-| `pti=off` | 5-15% | High (Meltdown vulnerability) |
-
----
-
-## Recommendations
-
-| Use Case | Recommended Profile |
-|----------|---------------------|
-| Daily desktop work | `nordix-cmd-desktop` |
-| Gaming | `nordix-cmd-extreme` |
-| Content creation | `nordix-cmd-desktop` |
-| Real-time audio | `nordix-cmd-extreme` + `threadirqs` |
-| Server/Multi-user | `nordix-cmd-default` (keep mitigations!) |
-| VM host | `nordix-cmd-vm` |
-
----
-
-## Creating Custom Profiles
-
-Copy an existing script and modify the flags:
-
-```bash
-cp /usr/lib/nordix/scripts/nordix-cmd-desktop.sh \
-   /usr/lib/nordix/scripts/nordix-cmd-custom.sh
-```
-
-Edit the `zfs set org.zfsbootmenu:commandline=` line with your desired flags.
 
 ---
 
