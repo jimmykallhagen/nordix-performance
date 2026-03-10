@@ -1,6 +1,7 @@
 # **Nordix - Performance Configuration**
 
 **File:** `/etc/modprobe.d/*.conf`  
+**File:** `/etc/sysctl.d/99-nordix-performance.conf`  
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
 **Author:** _Jimmy Källhagen_
 
