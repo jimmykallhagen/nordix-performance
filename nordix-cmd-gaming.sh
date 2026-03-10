@@ -72,7 +72,7 @@ done
 [[ "$start" == "$prev" ]] && NOHZ_RANGE+="$start" || NOHZ_RANGE+="$start-$prev"
 
 CMD_FLAG="rw boot=zfs nowatchdog mitigations=off amd_pstate=active \
-amd_pstate.shared_mem=1 amd_prefcore=enable idle=poll processor.max_cstate=1 intel_idle.max_cstate=1 \
+amd_pstate.shared_mem=1 amd_prefcore=enable idle=poll processor.max_cstate=2 intel_idle.max_cstate=2 \
 nohz=on nohz_full=${LAST_CPU} tsc=reliable clocksource=tsc \
 hpet=disable highres=on skew_tick=1 threadirqs split_lock_detect=off preempt=full nospectre_v1 \
 nospectre_v2 spec_store_bypass_disable=off tsx_async_abort=off mds=off srbds=off l1tf=off retbleed=off \
