@@ -1,4 +1,4 @@
-# **Nordix - GPU Configuration**
+# **Nordix - Performance Configuration**
 
 **File:** `/etc/modprobe.d/*.conf`  
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
