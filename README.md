@@ -6,12 +6,16 @@
 
 ---
 
-## **Overview**
-Optimized kernel module parameters for the AMD, Intel and NVIDIA
+## **Nordix comadline collection - Set performance profile for your specific workload**
+- [**Nordix comadline collection](nordix-performance/README-nordix-commandline-collection.md)
 
----
+## Optimized kernel module parameters for the AMD, Intel and NVIDIA
 
-## **GPU** - Configuration
+**GPU** - Configuration
   - [**AMD-GPU**](/README-amdgpu.md) - _Optimized kernel module parameters_
   - [**INTEL-GPU**](/README-intel.md) - _Optimized kernel module parameters_
   - [**NVIDIA-GPU**](/README-nvidia.md) - _Optimized kernel module parameters_
+
+
+## Nordix - System performance
+- [99-nordix-performance.conf](nordix-performance/README-performance.md)
