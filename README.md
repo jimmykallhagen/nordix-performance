@@ -7,7 +7,7 @@
 ---
 
 ## **Nordix comadline collection - Set performance profile for your specific workload**
-- [**Nordix comadline collection](nordix-performance/README-nordix-commandline-collection.md)
+- [**Nordix comadline collection](/nordix-performance/README-nordix-commandline-collection.md)
 
 ## Optimized kernel module parameters for the AMD, Intel and NVIDIA
 
@@ -18,4 +18,4 @@
 
 
 ## Nordix - System performance
-- [99-nordix-performance.conf](nordix-performance/README-performance.md)
+- [99-nordix-performance.conf](/nordix-performance/README-performance.md)
