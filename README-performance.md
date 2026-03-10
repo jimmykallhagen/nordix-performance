@@ -13,9 +13,12 @@ Part of [Yggdrasil — Nordix Desktop Environment](https://github.com/Nordix).
 
 ## What is this?
 
-Nordix Performance is a curated set of kernel and system configurations designed for high-RAM desktop systems (32GB–128GB) running demanding workloads — gaming, content creation, and development. Every value is chosen deliberately, documented with reasoning, and tuned for throughput over safety margins.
+Nordix Performance is a curated set of kernel and system configurations designed for high-RAM desktop systems (32GB–128GB) running demanding workloads  gaming, content creation, development and compile. Every value is chosen deliberately, documented with reasoning, and tuned for throughput over safety margins.
 
 This is not a "one size fits all" config. This is for enthusiasts who understand the trade-offs and want maximum performance from their hardware.
+
+**Use it with:** 
+- [Nordix Graceful Shutdown](https://github.com/jimmykallhagen/nordix-graceful-shutdown)
 
 ---
 
