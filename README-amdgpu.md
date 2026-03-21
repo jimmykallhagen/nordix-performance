@@ -1,6 +1,7 @@
 # Nordix AMD GPU Configuration
 
 **File:** `/etc/modprobe.d/amdgpu.conf`  
+**SPDX-License-Identifier:** PolyForm-Noncommercial-1.0.0                            
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
 **Author:** Jimmy Källhagen
 
