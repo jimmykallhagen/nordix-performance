@@ -1,6 +1,7 @@
 # Nordix NVIDIA GPU Configuration
 
 **File:** `/etc/modprobe.d/nvidia.conf`  
+**SPDX-License-Identifier:** PolyForm-Noncommercial-1.0.0  
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
 **Author:** Jimmy Källhagen
 
@@ -170,9 +171,10 @@ The config file includes commented-out options for advanced tuning:
 
 ## License
 
-* SPDX-License-Identifier: GPL-3.0-or-later                         
-* Copyright (c) 2025 Jimmy Källhagen                                
-* Part of Nordix - https://github.com/jimmykallhagen/Nordix             
-* Nordix and Yggdrasil are trademarks of Jimmy Källhagen
+ * SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0                            
+ * [**Nordix - license**](https://polyformproject.org/licenses/noncommercial/1.0.0) 
+ * Copyright (c) 2025 Jimmy Källhagen                                               
+ * Part of Nordix - https://github.com/jimmykallhagen/Nordix                        
+ * Nordix and Yggdrasil are trademarks of Jimmy Källhagen 
 
 ---
