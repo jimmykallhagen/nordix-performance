@@ -1,10 +1,11 @@
 #!/bin/bash
-##========================================================##
- # SPDX-License-Identifier: GPL-3.0-or-later              #
- # Copyright (c) 2025 Jimmy Källhagen                     #
- # Part of Yggdrasil - Nordix desktop environment         #
- # Nordix and Yggdrasil are trademarks of Jimmy Källhagen # 
-##========================================================##
+##=============================================================================##
+ # SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0                       #
+ # Nordix license - https://polyformproject.org/licenses/noncommercial/1.0.0   #
+ # Copyright (c) 2025 Jimmy Källhagen                                          #
+ # Part of Nordix - https://github.com/jimmykallhagen/Nordix                   #
+ # Nordix and Yggdrasil are trademarks of Jimmy Källhagen                      #
+##=============================================================================##
 
  if [[ $EUID -ne 0 ]]; then
      echo "This script must be run as root (sudo)"
