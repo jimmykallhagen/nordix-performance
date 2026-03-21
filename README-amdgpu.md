@@ -120,7 +120,8 @@ Verify `dcfeaturemask=0xffffffff` is active and check `vrr_capable` status.
 
 ## License
 
-* SPDX-License-Identifier: GPL-3.0-or-later                         
-* Copyright (c) 2025 Jimmy Källhagen                                
-* Part of Nordix - https://github.com/jimmykallhagen/Nordix             
-* Nordix and Yggdrasil are trademarks of Jimmy Källhagen
+ * SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0                            
+ * [**Nordix - license**](https://polyformproject.org/licenses/noncommercial/1.0.0) 
+ * Copyright (c) 2025 Jimmy Källhagen                                               
+ * Part of Nordix - https://github.com/jimmykallhagen/Nordix                        
+ * Nordix and Yggdrasil are trademarks of Jimmy Källhagen 
