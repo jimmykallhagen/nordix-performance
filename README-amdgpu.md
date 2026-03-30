@@ -37,7 +37,6 @@ sudo reboot
 | `vm_size` | 512 | 512 GB virtual address space per process |
 | `vm_update_mode` | 2 | Hybrid CPU+SDMA page table updates |
 | `scheduler` | 2 | Priority-based GPU job scheduling |
-| `sched_job_policy` | 2 | Favor interactive/shorter jobs |
 | `gpu_recovery` | 1 | Auto-reset GPU on hang |
 | `lockup_timeout` | 10000 | 10 second timeout before declaring hang |
 | `ppfeaturemask` | 0xffffffff | All power/clock features unlocked |
