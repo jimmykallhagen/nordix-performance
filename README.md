@@ -20,3 +20,8 @@
 
 ## Nordix - System performance
 - [**99-nordix-performance.conf**](README-performance.md)
+
+## Nordix - Optimized build configuration
+- C/C++
+- Rust
+- Fortran
