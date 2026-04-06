@@ -34,7 +34,7 @@ pcie_aspm=force pcie_aspm.policy=powersupersave \
 nvme.noacpi=0 \
 loglevel=3 splash fastboot quiet"
 
-zfs set org.zfsbootmenu:commandline="$CMD_FLAG" ${ROOT_DATASET}
+zfs set org.zfsbootmenu:commandline="${CMD_FLAG}" ${ROOT_DATASET}
 
 echo "$CMD_FLAG"
 echo ""
