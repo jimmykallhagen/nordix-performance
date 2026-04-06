@@ -31,7 +31,7 @@ mmio_stale_data=off gather_data_sampling=off reg_file_data_sampling=off \
 random_trust_cpu=on random_trust_bootloader=on transparent_hugepage=madvise \
 zswap.enabled=0 loglevel=3 splash snd_hda_intel.power_save=0 snd_hda_intel.power_save_controller=N fastboot quiet"
 
-zfs set org.zfsbootmenu:commandline="$CMD_FLAG" ${ROOT_DATASET}
+zfs set org.zfsbootmenu:commandline="${CMD_FLAG}" ${ROOT_DATASET}
 
 echo "$CMD_FLAG"
 
