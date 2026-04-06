@@ -84,7 +84,7 @@ echo "Reserved system cores (No - nohz_full on): ${reserved_cpus[*]}"
 echo "nohz_full=${NOHZ_RANGE}"
 sleep 2
 
-zfs set org.zfsbootmenu:commandline="$CMD_FLAG" ${ROOT_DATASET}
+zfs set org.zfsbootmenu:commandline="${CMD_FLAG}" ${ROOT_DATASET}
 
 echo "Reserved system cores (No - nohz_full on): ${reserved_cpus[*]}"
 sleep 1 
