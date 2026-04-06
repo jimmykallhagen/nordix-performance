@@ -9,9 +9,10 @@
 
 **File:** `/etc/modprobe.d/*.conf`  
 **File:** `/etc/sysctl.d/99-nordix-performance.conf`  
-**Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
-**Author:** _Jimmy Källhagen_
-
+**File:** `/etc/makepkg.conf`
+**File:** `/etc/makepkg.conf.d/rust.conf`
+**File:** `/etc/makepkg.conf.d/fortran.conf`
+**File:** `nordix-cmd-*`
 ---
 
 ## **Nordix commandline collection - Set performance profile for your specific workload**
@@ -30,6 +31,11 @@
 
 ## Nordix - System performance
 - [**99-nordix-performance.conf**](README-performance.md)
+
+---
+
+## Nordix - Commandline collection (ZFSbootmenu)
+- [**Commandilne-Collection](README-nordix-commandline-collection.md)
 
 ---
 
