@@ -77,7 +77,7 @@ processor.max_cstate=1 intel_idle.max_cstate=1 amd_pstate=active idle=nomwait zs
 clocksource=tsc tsc=reliable hpet=disable nohz=on nohz_full=${NOHZ_RANGE} highres=on threadirqs skew_tick=1 splash loglevel=3 \
 snd_hda_intel.power_save=0 snd_hda_intel.power_save_controller=N fastboot quiet"
 
-zfs set org.zfsbootmenu:commandline="$CMD_FLAG" ${ROOT_DATASET}
+zfs set org.zfsbootmenu:commandline="${CMD_FLAG}" ${ROOT_DATASET}
 
 echo "Reserved system cores (No - nohz_full on): ${reserved_cpus[*]}"
 sleep 1
