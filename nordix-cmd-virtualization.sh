@@ -72,7 +72,7 @@ for i in "${nohz_cpus[@]:1}"; do
 done
 [[ "$start" == "$prev" ]] && NOHZ_RANGE+="$start" || NOHZ_RANGE+="$start-$prev"
 
-CMD_FLAG=""rw boot=zfs nowatchdog mitigations=off \
+CMD_FLAG="rw boot=zfs nowatchdog mitigations=off \
 amd_pstate=active amd_pstate.shared_mem=1 amd_prefcore=enable kvm.ignore_msrs=1 \
 kvm.report_ignored_msrs=0 kvm_amd.nested=1 kvm_amd.npt=1 kvm_amd.avic=1 vfio_iommu_type1.allow_unsafe_interrupts=1 \
 iommu=pt amd_iommu=on idle=halt processor.max_cstate=3 intel_idle.max_cstate=3 nohz=on nohz_full=${NOHZ_RANGE} numa_balancing=1 preempt=voluntary \
