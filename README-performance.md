@@ -1,7 +1,6 @@
 # Nordix Performance
 
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
-**SPDX-License-Identifier:** PolyForm-Noncommercial-1.0.0  
 **Author:** Jimmy Källhagen
 
 
