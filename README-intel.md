@@ -137,12 +137,7 @@ lspci -nn | grep -i vga
 ```
 
 ---
-
-## License
-
- * SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0                            
- * [**Nordix - license**](https://polyformproject.org/licenses/noncommercial/1.0.0) 
- * Copyright (c) 2025 Jimmy Källhagen                                               
+                                      
  * Part of Nordix - https://github.com/jimmykallhagen/Nordix                        
  * Nordix and Yggdrasil are trademarks of Jimmy Källhagen 
 
