@@ -1,7 +1,6 @@
 # Nordix Commandline Collection
 
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
-**License:**  PolyForm-Noncommercial-1.0.0   
 **Author:** Jimmy Källhagen
 
 ## Overview
