@@ -215,12 +215,3 @@ Nordix follows the laws of performance. Every default in the Linux kernel is a c
 This is not for production servers. This is not for laptops on battery. This is for the machine sitting on your desk that you built to be fast.
 
 ---
-
-## License
-
-
- * SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0                            
- * [**Nordix - license**](https://polyformproject.org/licenses/noncommercial/1.0.0) 
- * Copyright (c) 2025 Jimmy Källhagen                                               
- * Part of Nordix - https://github.com/jimmykallhagen/Nordix                        
- * Nordix and Yggdrasil are trademarks of Jimmy Källhagen 
