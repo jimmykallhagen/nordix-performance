@@ -33,7 +33,11 @@
 ---
 
 ## Nordix - Commandline collection (ZFSbootmenu)
-- [**Commandilne-Collection](README-nordix-commandline-collection.md)
+- [**Commandilne-Collection**](README-nordix-commandline-collection.md)
+
+---
+## Gaming
+- [**NTSync**](https://github.com/jimmykallhagen/nordix-performance/blob/main/modules-load.d/README.md)
 
 ---
 
