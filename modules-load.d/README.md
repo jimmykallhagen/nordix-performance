@@ -34,7 +34,7 @@ The envirorment flag för Ntsync is:
 - PROTON_USE_WOW64=1
 ```
 
-#### It is recommended to disable previous sync methods using 
+#### To disable previous sync methods using 
 ```
 PROTON_NO_FSYNC=1
 PROTON_NO_ESYNC=1
