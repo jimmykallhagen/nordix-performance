@@ -26,15 +26,15 @@ NTSync is kernel-level synchronization primitive for Proton, designed to improve
 ## How to use Ntsync
 The envirorment flag för Ntsync is:
 ```
-- PROTON_USE_NTSYNC=1
+PROTON_USE_NTSYNC=1
 ```
 
 #### 32-bit Games: Some older or 32-bit games may require:
 ```
-- PROTON_USE_WOW64=1
+PROTON_USE_WOW64=1
 ```
 
-#### If ypu want to disable a sync methods using 
+#### If you want to disable a sync methods using 
 ```
 PROTON_NO_FSYNC=1
 PROTON_NO_ESYNC=1
