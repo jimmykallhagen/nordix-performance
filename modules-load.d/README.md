@@ -5,21 +5,21 @@ There are a number of environment flags to use to increase performance for your 
 
 **The traditional flags are:**
 ```
-- WINEESYNC=1 
-- WINEFSYNC=1
+WINEESYNC=1 
+WINEFSYNC=1
 ```
 >This must be set as an option at game start most of the time.
 
 #### In Steam 
 ```
-- WINEESYNC=1 %command%
-- WINEFSYNC=1 %command%
+WINEESYNC=1 %command%
+WINEFSYNC=1 %command%
 ```
 ---
 
 ## What is Ntsync?
 
- NTSync is kernel-level synchronization primitive for Proton, designed to improve gaming performance and reduce stuttering by closely mimicking Windows synchronization. It requires a patched Linux kernel (e.g., 6.12+) and is enabled via launch options, often benefiting complex, heavily threaded games. It aims to reduce overhead compared to previous user-space methods like FSync and ESync by handling synchronization directly within the kernel. 
+NTSync is kernel-level synchronization primitive for Proton, designed to improve gaming performance and reduce stuttering by closely mimicking Windows synchronization. It requires a patched Linux kernel (e.g., 6.12+) and is enabled via launch options, often benefiting complex, heavily threaded games. It aims to reduce overhead compared to previous user-space methods like FSync and ESync by handling synchronization directly within the kernel. 
 
 ---
 
