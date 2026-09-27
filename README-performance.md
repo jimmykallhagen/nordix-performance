@@ -95,7 +95,7 @@ Reduced proactive compaction avoids random CPU spikes during gameplay.
 vm.hugetlb_shm_group = 1000
 ```
 
-HugePages (2MB pages vs 4KB default) are not statically reserved — instead, Nordix provides a performance launcher that enables hugepages temporarily when starting a program. The `hugetlb_shm_group` is set to allow non-root usage.
+HugePages (2MB pages vs 4KB default) are not statically reserved instead, Nordix provides a performance launcher that enables hugepages temporarily when starting a program. The `hugetlb_shm_group` is set to allow non-root usage.
 
 ### Kernel Watchdogs
 
@@ -112,7 +112,7 @@ All watchdogs disabled. Saves CPU cycles and reduces latency jitter. Trade-off: 
 | Setting | Linux Default | Nordix | Effect |
 |---------|:---:|:---:|--------|
 | `kernel.split_lock_mitigate` | 1 | 0 | Disable split lock mitigation for throughput |
-| `kernel.numa_balancing` | 1 | 0 | Disable NUMA balancing (single-socket systems) |
+| `kernel.numa_balancing` | 1 | 0 | Disable NUMA balancing (single socket systems) |
 | `kernel.sched_autogroup_enabled` | 1 | 1 | Keep autogroup for desktop responsiveness |
 
 ### Security
@@ -180,7 +180,7 @@ Optimized TCP/IP stack for low-latency gaming and high-throughput transfers:
 
 ### Real-Time Scheduling
 
-`@audio` and `@wheel` groups get `rtprio 99` and `nice -19` — maximum scheduling priority for audio production and admin users.
+`@audio` and `@wheel` groups get `rtprio 99` and `nice -19`  maximum scheduling priority for audio production and admin users.
 
 ---
 
@@ -210,7 +210,7 @@ Log out and back in for limits.conf to take effect.
 
 ## Philosophy
 
-Nordix follows the laws of performance. Every default in the Linux kernel is a compromise — balanced for servers, embedded systems, and desktops alike. Nordix Performance strips away those compromises for a single purpose: the fastest possible desktop experience.
+Nordix follows the laws of performance. Every default in the Linux kernel is a compromise  balanced for servers, embedded systems, and desktops alike. Nordix Performance strips away those compromises for a single purpose: the fastest possible desktop experience.
 
 This is not for production servers. This is not for laptops on battery. This is for the machine sitting on your desk that you built to be fast.
 
