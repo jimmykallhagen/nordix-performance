@@ -1,7 +1,7 @@
 # Nordix AMD GPU Configuration
 
 **File:** `/etc/modprobe.d/amdgpu.conf`  
-**SPDX-License-Identifier:** PolyForm-Noncommercial-1.0.0                            
+**SPDX-License-Identifier:** GPL-3.0-or-later                            
 **Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
 **Author:** Jimmy Källhagen
 
@@ -36,7 +36,6 @@ sudo reboot
 | `vm_fragment_size` | 9 | Balanced fragment granularity for mixed workloads |
 | `vm_size` | 512 | 512 GB virtual address space per process |
 | `vm_update_mode` | 2 | Hybrid CPU+SDMA page table updates |
-| `scheduler` | 2 | Priority-based GPU job scheduling |
 | `gpu_recovery` | 1 | Auto-reset GPU on hang |
 | `lockup_timeout` | 10000 | 10 second timeout before declaring hang |
 | `ppfeaturemask` | 0xffffffff | All power/clock features unlocked |
@@ -117,11 +116,3 @@ Lower `vm_block_size` or reduce `gttsize`.
 Verify `dcfeaturemask=0xffffffff` is active and check `vrr_capable` status.
 
 ---
-
-## License
-
- * SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0                            
- * [**Nordix - license**](https://polyformproject.org/licenses/noncommercial/1.0.0) 
- * Copyright (c) 2025 Jimmy Källhagen                                               
- * Part of Nordix - https://github.com/jimmykallhagen/Nordix                        
- * Nordix and Yggdrasil are trademarks of Jimmy Källhagen 
